@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>OFFMN's Notebook</title>
+    <style>
+        body {
+            background: #1e1e2f;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: #ccc;
+        }
+        .info {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>OFFMN's Notebook</h1>
+        <h3>Welcome back</h3>
+    </div>
+
+    <!-- 引入 WinBox（使用 CDN，省去安装依赖的烦恼） -->
+    <script src="https://cdn.jsdelivr.net/npm/winbox@0.2.6/dist/winbox.bundle.min.js"></script>
+    
+    <script>
+        // 确保库加载完毕后再创建窗口
+        document.addEventListener('DOMContentLoaded', function() {
+            var mainWin = new WinBox({
+                title: "Notebook",
+                width: 800,
+                height: 600,
+                url: './MainWindow.html',
+                // 以下可选，添加毛玻璃风格（Aero效果）
+                background: 'rgba(255, 255, 255, 0.15)',
+                border: 0.8,
+                class: 'modern-glass'
+            });
+            var listWin = new WinBox({
+                title: "Website List",
+                width: 400,
+                height: 600,
+                url: './WebSiteList.html',
+                // 以下可选，添加毛玻璃风格（Aero效果）
+                background: 'rgba(255, 255, 255, 0.15)',
+                border: 0.8,
+                class: 'modern-glass'
+            })
+        });
+    </script>
+</body>
+</html>
